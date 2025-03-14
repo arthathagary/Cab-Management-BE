@@ -15,6 +15,7 @@ const bookingRouter = require("./routes/bookingRoute");
 const carRouter = require("./routes/carRoute");
 const reviewRouter = require("./routes/reviewRoute");
 const paymentRouter = require("./routes/paymentRoute");
+const billRouter = require("./routes/billRoute");
 
 app.use("/api/users", userRouter);
 app.use("/api/customers", customerRouter);
@@ -23,5 +24,6 @@ app.use("/api/bookings", bookingRouter);
 app.use("/api/cars", carRouter);
 app.use("/api/reviews", reviewRouter);
 app.use("/api/payments", paymentRouter);
+app.use("/api/bill", billRouter);
 
 module.exports = app;

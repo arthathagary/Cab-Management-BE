@@ -52,7 +52,7 @@ exports.deleteDriver = async (req, res) => {
     if (!driver) {
       return res.status(404).json({ message: "Driver not found" });
     }
-    await driver.remove();
+    await driver.deleteOne();
     res.status(200).json({ message: "Driver deleted" });
   } catch (error) {
     res.status(500).json({ message: error.message });
